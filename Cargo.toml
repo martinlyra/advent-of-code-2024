@@ -4,12 +4,12 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-regex = "1.11.0"
-itertools = "0.13.0"
-rayon = "1.10.0"
-cached = "0.54.0"
+regex = "*"
+itertools = "*"
+rayon = "*"
+nalgebra = "*"
 
 [[bin]]
 name = "active"
-path = "src/day_12.rs"
+path = "src/day_15.rs"
 
