@@ -6,8 +6,8 @@ use std::{
 
 use itertools::Itertools;
 
-struct Path {
-    visited: Vec<(usize, usize)>,
+pub struct Path {
+    pub visited: Vec<(usize, usize)>,
     last_direction: (i32, i32),
     turns: usize,
 }
@@ -67,7 +67,7 @@ fn find_position_of(input: &Vec<Vec<char>>, target: char) -> Option<(usize, usiz
         .next()
 }
 
-fn find_paths(input: &Vec<Vec<char>>) -> Vec<Path> {
+pub fn find_paths(input: &Vec<Vec<char>>) -> Vec<Path> {
     let start = find_position_of(input, 'S').unwrap();
     let end = find_position_of(input, 'E').unwrap();
     let directions = vec![(1, 0), (0, 1), (-1, 0), (0, -1)];
@@ -136,7 +136,7 @@ fn find_paths(input: &Vec<Vec<char>>) -> Vec<Path> {
     paths
 }
 
-fn read_input(file_path: &str) -> Vec<Vec<char>> {
+pub fn read_input(file_path: &str) -> Vec<Vec<char>> {
     read_to_string(file_path)
         .unwrap()
         .trim()
