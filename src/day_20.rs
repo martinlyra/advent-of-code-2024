@@ -30,15 +30,9 @@ fn main() {
     let input_paths = find_paths(&input);
     let input_path = input_paths.iter().next().unwrap();
     let map = part_1(&input_path, 100);
-    println!(
-        "First part answer: {}",
-        map.values().sum::<i32>()
-    );
+    println!("First part answer: {}", map.values().sum::<i32>());
     let map = part_2(&input_path, 100);
-    println!(
-        "Second part answer: {}",
-        map.values().sum::<i32>()
-    );
+    println!("Second part answer: {}", map.values().sum::<i32>());
 }
 
 fn manhattan(a: &(usize, usize), b: &(usize, usize)) -> usize {

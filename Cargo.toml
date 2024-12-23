@@ -10,8 +10,8 @@ itertools = "*"
 rayon = "*"
 cached = "*"
 nalgebra = "*"
+lazy_static = "*"
 
 [[bin]]
 name = "active"
-path = "src/day_20.rs"
-
+path = "src/day_23.rs"
